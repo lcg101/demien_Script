@@ -1,0 +1,240 @@
+{
+    "code": "0000",
+    "message": "조회 성공",
+    "data": {
+        "server": {
+            "idx": "17133",
+            "hostname": "q361-2879.cafe24.com",
+            "grade": "2",
+            "vs_type": null,
+            "lvs_type": null,
+            "managed_flag": "F",
+            "cable": "43",
+            "electric": "",
+            "rack_ab": "23",
+            "console_confirm": "T",
+            "unit_height": "1",
+            "deploy_flag": "T",
+            "insert_date": "2016-11-04 00:00:00",
+            "setting_date": "2016-11-04",
+            "service_start_date": "2016-11-04",
+            "hdd_setting_date": "20161104",
+            "idc_into_date": "2016-11-04",
+            "update_date": "2024-02-20 11:53:36",
+            "lately_update_date": "2023-10-24 19:31:51",
+            "collect_date": null,
+            "auto_collect": "F",
+            "use_flag": "F",
+            "is_deleted": "F",
+            "hidden_flag": "F",
+            "sms_alarm_flag": "F",
+            "sms_alarm_period": null,
+            "scout_flag": "F",
+            "prometheus_flag": "F",
+            "server_change_date": null,
+            "server_change_comment": "",
+            "info_idx": "17130",
+            "server_idx": "17133",
+            "service_id": "",
+            "service_type": null,
+            "asset_type": "3",
+            "confidentiality": "33",
+            "integrity": "37",
+            "availability": "41",
+            "check_except": "N",
+            "tax_number": "",
+            "last_updated_person": "이형근",
+            "lately_updated_person": "최승필",
+            "alert_prefix": "",
+            "development_link": "",
+            "purpose": "퀵서버호스팅",
+            "request_info": "",
+            "comment": "q361-2228 -> q361-2832\r\nq361-2832 -> q361-2879",
+            "server_seiral_number": "",
+            "eos_info_idx": null,
+            "isms_flag": "F",
+            "airgap_flag": "F",
+            "nat_id": "",
+            "nat_idx": "0",
+            "price_model_idx": "79",
+            "bios": "Legacy",
+            "switch_idx": null,
+            "switch_model": null,
+            "switch_seiral_number": null,
+            "switch_firmware": null,
+            "switch_depth": null,
+            "uplink_port1": null,
+            "uplink_port2": null,
+            "switch_warranty": null,
+            "switch_insert_date": null,
+            "ip_address_type": {
+                "P": [
+                    {
+                        "id": "222.239.248.195",
+                        "name": "222.239.248.195",
+                        "comment": "",
+                        "ip_hostname": ""
+                    }
+                ],
+                "I": [
+                    {
+                        "id": "172.17.248.195",
+                        "name": "172.17.248.195",
+                        "comment": "",
+                        "ip_hostname": ""
+                    }
+                ]
+            },
+            "mac_address": {
+                "P": "0C:C4:7A:83:B0:E0",
+                "I": "0C:C4:7A:8B:87:60"
+            },
+            "switch": {
+                "P": [
+                    "1412"
+                ],
+                "hostname": "h_switch696"
+            },
+            "port": "28",
+            "ifindex": "128",
+            "EAV": {
+                "System": {
+                    "Os": "Windows Server 2016 Standard 64bit"
+                },
+                "Hardware": {
+                    "Board": "X11SSL-F",
+                    "Cpu": "E3-1230 v5",
+                    "Ram": "16GB *1",
+                    "Disk": "SSD 240GB *1 + SATA 1TB *1 + NVMe SSD 400GB *1"
+                }
+            },
+            "server_type": "server",
+            "assetType": {
+                "idx": "3",
+                "name": "호스팅"
+            },
+            "rack_floor": [
+                "46",
+                "13",
+                "1366",
+                "55586"
+            ],
+            "regist_idc": "30",
+            "regist_idc_info": "SK",
+            "rack_floor_info": [
+                "SK",
+                "8F",
+                "13",
+                "B",
+                "12",
+                "22"
+            ],
+            "section": [
+                "742",
+                "903"
+            ],
+            "sections": [
+                {
+                    "depth": "0",
+                    "idx": "742",
+                    "name": "serverhosting"
+                },
+                {
+                    "depth": "1",
+                    "idx": "903",
+                    "name": "qsh-0000"
+                }
+            ],
+            "firewall": "16409",
+            "BACKUP_EXCEPT_SECTION": {
+                "idx": "13",
+                "section_depth_1": "742",
+                "section_depth_1_name": "serverhosting",
+                "section_depth_2": null,
+                "section_depth_2_name": null,
+                "section_depth_3": null,
+                "section_depth_3_name": null,
+                "except_backup": "A",
+                "except_reason": "serverhosting 서버는 백업 대상이 아님",
+                "admin_id": "wkim",
+                "admin_name": "김완",
+                "is_deleted": "F",
+                "insert_date": "2018-05-04 16:28:43"
+            },
+            "backup": [
+                []
+            ],
+            "backup_setting": {
+                "idx": "10286",
+                "server_idx": "17133",
+                "start_schedule": "00 05 * * *",
+                "check_schedule": "30 08 * * *",
+                "check_net_schedule": "",
+                "pgbackup_start_schedule": "00 05 * * *",
+                "mysql_xtra_start_schedule": "00 05 * * *",
+                "mysql_dump_start_schedule": "00 05 * * *",
+                "mysql_tar_start_schedule": "00 05 * * *",
+                "local_flag": "F",
+                "network_flag": "F",
+                "pgbackup_flag": "F",
+                "mysql_xtra_flag": "F",
+                "mysql_dump_flag": "F",
+                "mysql_tar_flag": "F",
+                "local_comment": "",
+                "network_comment": "",
+                "pgbackup_comment": "",
+                "mysql_xtra_comment": "",
+                "mysql_dump_comment": "",
+                "mysql_tar_comment": "",
+                "network_server": "",
+                "is_deleted": "F"
+            },
+            "manager": {
+                "I1": [
+                    {
+                        "id": "오종보(jboh, MX팀 > MX그룹 > 매니지드기술지원팀 > 팀장)",
+                        "name": "오종보(팀장_jboh)",
+                        "is_deleted": "F"
+                    }
+                ],
+                "S1": [
+                    {
+                        "id": "윤덕식(dsyun, MX팀 > MX그룹 > 매니지드기술지원팀 > MTS1)",
+                        "name": "윤덕식(MTS1_dsyun)",
+                        "is_deleted": "F"
+                    }
+                ],
+                "S2": [
+                    {
+                        "id": "김재영(jykim03, MX팀 > MX그룹 > 매니지드기술지원팀 > MTS2)",
+                        "name": "김재영(MTS2_jykim03)",
+                        "is_deleted": "F"
+                    }
+                ],
+                "I2": ""
+            },
+            "label": [
+                "iptables:sys",
+                "BT01:서버호스팅",
+                "BT02:서버호스팅",
+                "BT03:퀵서버호스팅",
+                "ST:prod"
+            ]
+        },
+        "network_info": [
+            []
+        ],
+        "switch": {
+            "model": "",
+            "serial_number": "",
+            "firmware": "",
+            "warrenty": "",
+            "depth": "",
+            "uplink_port1": "",
+            "uplink_port2": "",
+            "uplink_ip1": [],
+            "uplink_ip2": [],
+            "uplink_switchs": []
+        }
+    }
+}
