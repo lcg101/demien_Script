@@ -1,0 +1,25 @@
+[20240612]퀵_PXE부팅_미납 회수 3건 (총 서버대수 : 3대)
+https://jira.simplexi.com/browse/SERVER-41723
+
+
+
+최종 출력 결과 for globalsms07:
+globalsms07 : 해지 /  qs211-0511 / 211 / 1.248.227.166
+/ qs211-0583 / OS: Win2019 / abBdee3f / 9F-X-04(28)  / kellogzz 고객사 할당
+NAT 서버: qipminat-006.cafe24.com  사설IP: 172.17.227.166 // 1.226.83.122 
+
+
+
+최종 출력 결과 for adnew01:
+adnew01 : 해지 /  qs211-0368 / 211 / 175.126.232.220  / trapas17 고객사 할당
+/ qs211-0584 / OS: CentOS7 / b7B4eed9 / 8F-11-02(8)
+NAT 서버: qipminat-003.cafe24.com  사설IP: 172.18.232.220
+
+
+
+최종 출력 결과 for sendserver02:
+sendserver02 : 해지 /  qs211-0371 / 211 / 175.126.232.229
+/ qs211-0585 / OS: CentOS7 / 206Cf745 / 8F-11-02(17)
+NAT 서버: qipminat-003.cafe24.com  사설IP: 172.18.232.229
+
+
