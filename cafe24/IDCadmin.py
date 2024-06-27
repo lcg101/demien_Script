@@ -33,7 +33,7 @@ def fetch_user_info(user_id):
                 rows = next_sibling.find_elements(By.TAG_NAME, 'tr')
                 for row in rows:
                     cells = row.find_elements(By.TAG_NAME, 'td')
-                    if cells:
+                    if cells and any(cell.text.startswith(('q', 'qn', 'qs')) for cell in cells):
                         server_text = cells[8].text  
                         break
                 break
