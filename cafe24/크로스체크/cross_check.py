@@ -3,7 +3,7 @@ import re
 import requests
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from requests.adapters import HTTPAdapter
-from requests.packages.urllib3.util.retry import Retry
+from urllib3.util import Retry
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys  
@@ -197,6 +197,13 @@ def fetch_mac_addresses(driver):
     
     return check_mac, private_mac
 
+def standardize_os_info(os_info):
+    os_mapping = {
+        'Windows 2016 Standard 64bit': 'Win2016',
+        'Windows 2019 Standard 64bit': 'Win2019'
+    }
+    return os_mapping.get(os_info, os_info)
+
 def main():
     start_time = time.time()
     
@@ -243,10 +250,14 @@ def main():
                 api_hostname, public_ip, internal_ip, api_os_info, rack_floor_info, public_mac, internal_mac = hostname_details(prefix, number)
                 Rack_info = rack_info(rack_floor_info)
                 
+                # OS 정보 표준화
+                standardized_api_os_info = standardize_os_info(api_os_info)
+                standardized_server_os_info = standardize_os_info(server_details['OS Type'])
+
                 # 비교
                 host_status = f"{C_GREEN}OK{C_END}" if server_details['Server Name'] == api_hostname.split('.')[0] else f"{C_RED}Fail{C_END}"
                 ip_status = f"{C_GREEN}OK{C_END}" if server_details['Server IP'] == public_ip else f"{C_RED}Fail{C_END}"
-                os_status = f"{C_GREEN}OK{C_END}" if server_details['OS Type'] == api_os_info else f"{C_RED}Fail{C_END}"
+                os_status = f"{C_GREEN}OK{C_END}" if standardized_server_os_info == standardized_api_os_info else f"{C_RED}Fail{C_END}"
                 public_mac_status = f"{C_GREEN}OK{C_END}" if check_mac == public_mac else f"{C_RED}Fail{C_END}"
                 private_mac_status = f"{C_GREEN}OK{C_END}" if private_mac == internal_mac else f"{C_RED}Fail{C_END}"
 
@@ -255,7 +266,7 @@ def main():
                 print(f"서비스: {server_details['Service']}")
                 print(f"서버명: {server_details['Server Name']:<26} 호스트명: {api_hostname} [{host_status}]")
                 print(f"서버 IP: {server_details['Server IP']:<25} 공인 IP: {public_ip} [{ip_status}]")
-                print(f"OS 정보: {server_details['OS Type']:<25} SYSTEM OS 정보: {api_os_info} [{os_status}]")
+                print(f"OS 정보: {server_details['OS Type']:<25} SYSTEM OS 정보: {standardized_api_os_info} [{os_status}]")
                 print(f"공인 MAC: {check_mac:<24} 공인 MAC: {public_mac} [{public_mac_status}]")
                 print(f"사설 MAC: {private_mac:<24} 사설 MAC: {internal_mac} [{private_mac_status}]")
                 print(f"사용자 ID: {server_details['User ID']}")
