@@ -17,8 +17,8 @@ def login_and_navigate_directly():
             EC.presence_of_element_located((By.ID, 'password'))
         )
 
-        username.send_keys('cglee02')
-        password.send_keys('dlckdrms15!')
+        username.send_keys('사용자명')
+        password.send_keys('패스워드')
         password.send_keys(Keys.RETURN)
 
 
