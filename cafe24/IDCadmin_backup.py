@@ -12,8 +12,8 @@ def fetch_user_info(user_id):
     try:
         username = WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.ID, 'adminid')))
         password = WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.ID, 'adminpw')))
-        username.send_keys('cglee02')
-        password.send_keys('dlckdrms15!')
+        username.send_keys('사용자명')
+        password.send_keys('비밀번호')
         password.send_keys(Keys.RETURN)
         WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.LINK_TEXT, '로그아웃')))
 
