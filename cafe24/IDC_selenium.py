@@ -129,8 +129,8 @@ def main():
         driver.quit()
         return
 
-    username.send_keys('cglee02')
-    password.send_keys('dlckdrms15!')
+    username.send_keys('사용자명')
+    password.send_keys('비밀번호호')
     password.send_keys(Keys.RETURN)
 
     try:
